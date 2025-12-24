@@ -1,0 +1,47 @@
+[
+    {
+        "id": 11617,
+        "state": "1",
+        "classroomName": "Taller, aprende seguridad en CCTV desde cero",
+        "registeredNumber": 0,
+        "remainCapacity": 20,
+        "description": "Curso basico, para captar nuevos instaladores en Sisegusa",
+        "languageComplete": "Español",
+        "startTime": "2025-11-18 14:00:00",
+        "overTime": "2025-12-18 16:30:00",
+        "location": "Sisegusa,Cochabamba,Bolivia, Plurinational State of",
+        "name": "Bolivia, Plurinational State of",
+        "lecturer_name": "Rolando Ibañez",
+        "typeEvent": "Webinar & Seminarios"
+    },
+    {
+        "id": 11525,
+        "state": "2",
+        "classroomName": "workshop VIDEO PORTERO IP Y ANALOGICO",
+        "registeredNumber": 6,
+        "remainCapacity": 14,
+        "description": "Detalles del evento\n¿Instalás sistemas de seguridad? 🔧\nNo te pierdas este entrenamiento presencial especializado en videoporteros IP y analógicos.\nDomina la instalación, configuración y compatibilidad con otros sistemas Hikvision.\n\n📅 Viernes 14 de noviembre | 18:00 hrs\n📍 Sala de capacitaciones de GSS, frente al Chiriguano\n🧭 Información en Comercial Chiriguano pasillo 5 y 6, locales 539 y 638",
+        "languageComplete": "Español",
+        "startTime": "2025-11-14 17:00:00",
+        "overTime": "2025-11-14 19:00:00",
+        "location": "CENTRO COMERCIAL CHIRIGUANO,Santa Cruz,SANTA CRUZ,Bolivia, Plurinational State of",
+        "name": "Bolivia, Plurinational State of",
+        "lecturer_name": "Daniel Asbun",
+        "typeEvent": "Webinar & Seminarios"
+    },
+    {
+        "id": 11489,
+        "state": "2",
+        "classroomName": "Workshop Correcta Inicialización DVR HIKVISION",
+        "registeredNumber": 3,
+        "remainCapacity": 17,
+        "description": "Detalles del evento\nCAPACITACIÓN PRESENCIAL PARA INSTALADORES\n\nPrepárate para dominar la inicialización completa de DVR y sistemas CCTV Hikvision.\nAprende paso a paso con nuestros expertos cómo configurar correctamente tus equipos y optimizar cada instalación.\n\n🔧 Temas:\n• Unboxing de grabadores y equipos Hikvision\n• Inicialización del sistema CCTV\n• Pruebas y configuración HPP\n• Visualización a través de la app Hik-Connect\n\n📅 Jueves 13 de noviembre\n🕒 De 15:00 a 17:00 hrs",
+        "languageComplete": "Español",
+        "startTime": "2025-11-13 14:00:00",
+        "overTime": "2025-11-13 16:00:00",
+        "location": "Sisegusa,Santa Cruz,Bolivia, Plurinational State of",
+        "name": "Bolivia, Plurinational State of",
+        "lecturer_name": "Daniel Asbun",
+        "typeEvent": "Webinar & Seminarios"
+    }
+]

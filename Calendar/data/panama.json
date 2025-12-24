@@ -1,0 +1,47 @@
+[
+    {
+        "id": 10872,
+        "state": "2",
+        "classroomName": "Taller de Hik-partner Pro: Funciones Avanzadas",
+        "registeredNumber": 22,
+        "remainCapacity": 3,
+        "description": "🎯 Workshop Presencial: Hik-Partner Pro – Licencias, funciones avanzadas y mucho más\n📅 Fecha: Miércoles 13 de noviembre\n⏰ Hora: 3:00 p.m. (Panamá)\n📍 Lugar: Hikvision Showroom – Oceanía Business Center, Torre 1000, Piso 16\n\n🔹 Tema: Taller de Hik-Partner Pro\nDomina la plataforma profesional de Hikvision. Aprende a gestionar licencias, explorar funciones avanzadas y aprovechar al máximo las herramientas que optimizan la administración de proyectos, dispositivos y servicios en campo.\n\n👨‍💻 En este workshop aprenderás:\n\nActivación y gestión de licencias en Hik-Partner Pro.\n\nUso de herramientas avanzadas para planificación y soporte.\n\nIntegración con otros sistemas Hikvision.\n\nConsejos para aprovechar beneficios exclusivos de la plataforma.\n\n🎓 Participa y recibe tu certificado de asistencia.",
+        "languageComplete": "Español",
+        "startTime": "2025-11-13 15:00:00",
+        "overTime": "2025-11-13 16:30:00",
+        "location": "Oceania Busisness plaza Torre 1000 piso 16 oficina 16A,Ciudad de panamá,Panama",
+        "name": "Panama",
+        "lecturer_name": "Ronaldo Jaramillo",
+        "typeEvent": "Webinar & Seminarios"
+    },
+    {
+        "id": 11265,
+        "state": "2",
+        "classroomName": "Taller Hik-Connect Teams - CCTV, Control de acceso",
+        "registeredNumber": 22,
+        "remainCapacity": 8,
+        "description": "🎯 Workshop Presencial: Control de Acceso en Hik-Connect Teams\n📅 Fecha: Miércoles 13 de noviembre\n⏰ Hora: 11:00 a.m. (Panamá)\n📍 Lugar: Hikvision Showroom – Oceanía Business Center, Torre 1000, Piso 16\n\n🔹 Tema: Taller de Control de Acceso en Hik-Connect Teams\nConviértete en un experto en soluciones en la nube. Aprende cómo gestionar dispositivos, usuarios y accesos desde la plataforma Hik-Connect Teams para ofrecer un control eficiente, seguro y centralizado.\n\n👨‍💻 En este workshop aprenderás:\n\nConfiguración y vinculación de dispositivos de control de acceso en la nube.\n\nGestión de usuarios, permisos y eventos desde Hik-Connect Teams.\n\nFunciones avanzadas y buenas prácticas para implementaciones remotas.\n\nRecomendaciones para soporte y administración continua.\n\n🎓 Participa y recibe tu certificado de asistencia.",
+        "languageComplete": "Español",
+        "startTime": "2025-11-13 11:00:00",
+        "overTime": "2025-11-13 13:00:00",
+        "location": "Panamá, Oceanía Business Plaza, Torre 1000, Piso 16 Oficina 16 A.,Panamá,Panama",
+        "name": "Panama",
+        "lecturer_name": "Ronaldo Jaramillo",
+        "typeEvent": "Webinar & Seminarios"
+    },
+    {
+        "id": 10862,
+        "state": "2",
+        "classroomName": "Integra Tu ARC con Hikvision con IP Reciever Pro",
+        "registeredNumber": 13,
+        "remainCapacity": 12,
+        "description": "🎯 Taller Presencial: Configuración y Uso de IP Receiver Pro\n\n📅 Fecha: Martes 12 de noviembre\n⏰ Hora: 11:00 a.m. (Panamá)\n📍 Lugar: Hikvision Showroom\nOceanía Business Center, Torre 1000, Piso 16\n\n🔹 Tema: Plataforma de software IP Receiver Pro\nAprende cómo configurar, administrar y aprovechar todas las funciones de esta potente herramienta para la recepción y gestión de eventos en sistemas de seguridad.\n\n👨‍💻 En este taller aprenderás:\n\nInstalación y puesta en marcha de IP Receiver Pro.\n\nIntegración con paneles y dispositivos Hikvision.\n\nSupervisión y administración de eventos en tiempo real.\n\nRecomendaciones prácticas para un funcionamiento estable.\n\n🎓 Participa y obtén tu certificado de asistencia.",
+        "languageComplete": "Español",
+        "startTime": "2025-11-12 03:00:00",
+        "overTime": "2025-11-12 13:00:00",
+        "location": "Oceania Busisness plaza Torre 1000 piso 16 oficina 16A,Ciudad de panamá,Panama",
+        "name": "Panama",
+        "lecturer_name": "Ronaldo Jaramillo",
+        "typeEvent": "Webinar & Seminarios"
+    }
+]
