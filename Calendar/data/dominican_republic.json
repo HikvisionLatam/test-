@@ -1,0 +1,17 @@
+[
+    {
+        "id": 11572,
+        "state": "2",
+        "classroomName": "Workshop Hik-Partner Pro",
+        "registeredNumber": 19,
+        "remainCapacity": 16,
+        "description": "Workshop para conocer ¿Qué es Hik-Partner Pro? características, ventajas, herramientas, requerimientos y mucho más",
+        "languageComplete": "Español",
+        "startTime": "2025-11-18 09:00:00",
+        "overTime": "2025-11-18 14:00:00",
+        "location": "F3H7+296, Av. Abraham Lincoln, Santo Domingo (Banesco Seguros),Distrito Nacional (S,Santo Domingo,Dominican Republic",
+        "name": "Dominican Republic",
+        "lecturer_name": "Andres Torres",
+        "typeEvent": "Webinar & Seminarios"
+    }
+]
