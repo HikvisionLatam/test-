@@ -1,0 +1,201 @@
+{
+    "hardware": {
+        "camera": "Câmera IA 4K Integrada",
+        "usb": "USB 3.0",
+        "touchUsb": "TOUCH-USB",
+        "hdmi": "Entrada HDMI",
+        "typeC": "Tipo-C",
+        "stylus": "Caneta Óptica (Magnética)",
+        "power": "Energia",
+        "speaker": "Alto-falante Estéreo",
+        "nfc": "Sensor NFC"
+    },
+    "mobileGuard": {
+        "title": "Ops! Acesso Restrito ⛔",
+        "desc1": "Esta interface é uma **simulação de tela interativa** projetada para monitores grandes.",
+        "desc2": "Por favor, acesse de um dispositivo com **tela mais larga** para interagir com a demonstração."
+    },
+    "intro": {
+        "badge": "Demonstração Interativa",
+        "title": "Explore como é uma tela interativa real",
+        "desc": "Esta interface é uma <1>demonstração</1>. Toque nos <3>ícones e botões</3> destacados para ver como uma tela interativa ao vivo responderia. Depois, <5>role para baixo</5> para descobrir mais.",
+        "button": "Começar a Interagir",
+        "tip": "Dica: continue rolando para ver mais recursos"
+    },
+    "os": {
+        "searchPlaceholder": "Pesquisar ou digitar URL",
+        "searchDemo": "Função Demo: A pesquisa na web não está conectada.",
+        "micDemo": "Demo: Microfone indisponível",
+        "castStart": "Iniciando servidor WonderCast...",
+        "appDemo": "Demo Interativa: O app \"{{appName}}\" é apenas uma simulação.",
+        "sourceHdmi": "Fonte: HDMI 1",
+        "googleAppsTitle": "Aplicativos Google",
+        "expandFolder": "Expandir Pasta"
+    },
+    "apps": {
+        "wonderCast": "WonderCast",
+        "whiteboard": "Quadro Branco",
+        "files": "Arquivos",
+        "settings": "Configurações",
+        "store": "Loja de Apps",
+        "googleFolder": "Google"
+    },
+    "bar": {
+        "input": "Entrada Atual",
+        "allApps": "Todos os Apps",
+        "home": "Início",
+        "multitask": "Multitarefa",
+        "wifi": "Wi-Fi",
+        "quickSettings": "Ajustes Rápidos",
+        "tools": "Ferramentas"
+    },
+    "tools": {
+        "demoMsg": "Demo: A ferramenta \"{{tool}}\" é apenas uma simulação.",
+        "names": {
+            "note": "Nota",
+            "camera": "Câmera",
+            "screenshot": "Captura",
+            "calculator": "Calculadora",
+            "stopwatch": "Cronômetro",
+            "countdown": "Temporizador",
+            "voting": "Votação",
+            "random": "Sorteio",
+            "piano": "Piano",
+            "record": "Gravar",
+            "lock": "Bloqueio",
+            "transfer": "Transferência",
+            "remote": "Remoto"
+        }
+    },
+    "piano": {
+        "title": "Piano Virtual",
+        "back": "Voltar"
+    },
+    "roulette": {
+        "title": "Seleção Aleatória",
+        "options": "Número de Opções",
+        "cancel": "Cancelar",
+        "next": "Próximo",
+        "spin": "GIRAR",
+        "winner": "O vencedor é",
+        "configure": "Configurar",
+        "spinAgain": "Girar Novamente"
+    },
+    "board": {
+        "menu": {
+            "title": "Mais Ferramentas",
+            "insertPicture": "Inserir Imagem",
+            "shape": "Formas",
+            "flowChart": "Fluxograma",
+            "stopwatch": "Cronômetro",
+            "openVideo": "Vídeo",
+            "table": "Tabela",
+            "note": "Nota",
+            "function": "Função",
+            "browser": "Navegador",
+            "calculator": "Calculadora",
+            "voting": "Votação",
+            "lock": "Bloqueio",
+            "demoSuffix": " (Demo)"
+        },
+        "toolbar": {
+            "exit": "Sair",
+            "menu": "Menu",
+            "save": "Salvar",
+            "share": "Compartilhar",
+            "pen": "Caneta",
+            "select": "Selecionar",
+            "white": "Branco",
+            "red": "Vermelho",
+            "green": "Verde",
+            "blue": "Azul",
+            "eraser": "Borracha",
+            "more": "Mais Ferramentas",
+            "undo": "Desfazer",
+            "redo": "Refazer",
+            "clear": "Limpar Quadro",
+            "addPage": "Adicionar Página",
+            "prev": "Anterior",
+            "next": "Próximo"
+        },
+        "obj": {
+            "zoomIn": "Aumentar Zoom",
+            "zoomOut": "Diminuir Zoom",
+            "edit": "Editar Gráfico",
+            "delete": "Excluir"
+        }
+    },
+    "modal": {
+        "headers": {
+            "functions": "Funções",
+            "parameters": "Parâmetros"
+        },
+        "types": {
+            "linear": "Linear",
+            "quadratic": "Quadrática",
+            "trig": "Seno"
+        },
+        "selectPrompt": "Selecione um tipo de função para editar parâmetros",
+        "ok": "OK"
+    },
+    "calendar": {
+        "loading": "Carregando eventos...",
+        "error_loading": "Não foi possível carregar os eventos.",
+        "no_events": "Não há eventos disponíveis.",
+        "title_latam": "Calendário de Eventos - Latam",
+        "title_country": "Calendário de Eventos - {{country}}",
+        "search_placeholder": "Buscar país...",
+        "no_countries_found": "Nenhum país encontrado.",
+        "location_unspecified": "Localização não especificada",
+        "scan_register": "Escaneie para Registrar",
+        "generating": "Gerando...",
+        "download": "Baixar",
+        "close": "Fechar",
+        "register": "Registrar-se",
+        "view_qr": "Ver QR",
+        "share": "Compartilhar",
+        "agenda": "Agenda",
+        "timeline": "Cronograma",
+        "no_events_filter": "Não há eventos para este filtro.",
+        "copied": "Copiado para a área de transferência!",
+        "copy_failed": "Não foi possível copiar automaticamente. Selecione e copie manualmente.",
+        "live_now": "🚨 AO VIVO AGORA! 🚨",
+        "almost_start": "🚨✨ Quase começando! ✨🚨",
+        "is_today": "📅 É hoje! 🚀",
+        "tomorrow": "⏰ Prepare-se para amanhã! ⏰",
+        "days_left": "🗓 Faltam {{count}} dias! 🗓",
+        "started": "O evento já começou!",
+        "in_minutes": "em {{count}} minutos",
+        "today_at": "hoje às {{time}}",
+        "tomorrow_text": "amanhã",
+        "in_days": "em {{count}} dias",
+        "dont_miss": "✨ Não perca! ✨",
+        "default_desc": "Inovação e tecnologia para você.",
+        "still_time": "✅ Ainda dá tempo de se registrar!",
+        "scan_mobile": "Escaneie para acessar do seu celular",
+        "download_qr": "Baixar QR",
+        "subscribe_now": "Inscreva-se Agora",
+        "month_prev_error": "Não é possível visualizar eventos de meses anteriores.",
+        "event_singular": "Evento",
+        "event_plural": "Eventos",
+        "finished_singular": "Finalizado",
+        "finished_plural": "Finalizados",
+        "weekdays": [
+            "Se",
+            "Te",
+            "Qa",
+            "Qi",
+            "Se",
+            "Sa",
+            "Do"
+        ],
+        "online": "Online",
+        "presencial": "Presencial",
+        "date_of": "de",
+        "type_webinar": "Webinars e Seminários",
+        "type_certification": "Certificações",
+        "type_opencourse": "Cursos Abertos",
+        "agenda": "Agenda",
+        "timeline": "Cronograma"
+    }
+}
