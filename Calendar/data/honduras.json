@@ -1,0 +1,17 @@
+[
+    {
+        "id": 11523,
+        "state": "3",
+        "classroomName": "Instalacion CCTV IP Desde Cero & Fibra Optica",
+        "registeredNumber": 0,
+        "remainCapacity": 25,
+        "description": "Taller practico de instalacion de sistema CCTV IP desde cero con integracion y conectividad por medio de fibra optica",
+        "languageComplete": "Español",
+        "startTime": "2025-11-08 09:00:00",
+        "overTime": "2025-11-08 17:00:00",
+        "location": "Santa rosa de copan. Honduras,Santa Rosa de Copan,Honduras",
+        "name": "Honduras",
+        "lecturer_name": "Fernando Chevez",
+        "typeEvent": "Webinar & Seminarios"
+    }
+]
