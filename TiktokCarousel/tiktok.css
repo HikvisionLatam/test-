@@ -1,0 +1,282 @@
+.innerVideo {
+    overflow: hidden;
+    border-radius: 24px;
+    max-width: 320px;
+    max-height: 570px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.innerVideo video {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+/* Zoom leve al hover / focus */
+.innerVideo:hover video,
+.innerVideo:focus-within video {
+    transform: scale(1.04);
+}
+
+.innerVideo .contentBottom {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    overflow: hidden;
+    background: none;
+}
+
+.innerVideo .contentBottom>div {
+    position: absolute;
+    inset: 0;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    pointer-events: none;
+}
+
+/* Capas de blur: fade solo en la mitad inferior */
+.innerVideo .contentBottom>div:nth-of-type(1) {
+    z-index: 2;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Tono oscuro */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.innerVideo .contentBottom>div:nth-of-type(2) {
+    z-index: 3;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Tono más oscuro */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.innerVideo .contentBottom>div:nth-of-type(3) {
+    z-index: 4;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Tono aún más oscuro */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 100%);
+}
+
+.innerVideo .contentBottom .head {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+    margin-bottom: 8px;
+}
+
+.innerVideo .contentBottom .head {
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+.innerVideo p {
+    color: #fff;
+    margin: 0;
+    font-size: 14px;
+}
+
+.innerVideo .contentBottom .head i {
+    color: #fff;
+    margin: 0;
+    font-size: 18px;
+}
+
+
+/* Botones TikTok */
+.botones-tiktok {
+    width: 100%;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.btn-ver-tiktok {
+    background: #fff !important;
+    color: #111 !important;
+    font-weight: bold;
+    flex: 2 1 0%;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.btn-mute {
+    background: rgba(30, 30, 30, 0.7) !important;
+    color: #fff !important;
+    flex: 1 1 0%;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-circle {
+    background: rgba(0, 0, 0, 0.4) !important;
+    color: #fff !important;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0%;
+    font-size: 1.3rem;
+    margin-left: 4px;
+    transition: background 0.2s;
+}
+
+.btn-circle:hover {
+    background: rgba(66, 165, 245, 0.7) !important;
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .innerVideo {
+        max-width: 95vw;
+        max-height: 70vh;
+    }
+
+    .botones-tiktok {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-ver-tiktok,
+    .btn-mute,
+    .btn-circle {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.innerVideo .btn-playpause-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.innerVideo:hover .btn-playpause-overlay,
+.innerVideo:focus-within .btn-playpause-overlay,
+.innerVideo .btn-playpause-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .innerVideo .btn-playpause-overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.btn-playpause-overlay:hover {
+    background: rgba(0, 0, 0, 0.65) !important;
+    color: #fff !important;
+}
+
+.btn-playpause-overlay:focus {
+    outline: none;
+}
+
+.text-suspensory-2lines {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+
+/* .btn-sendTiktok {
+    background: #d01e26 !important;
+    color: #fff !important;
+    font-weight: bold;
+    flex: 2 1 0%;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+} */
+
+
+.btn-sendTiktok {
+    --button_radius: 0.75em;
+    --button_color: #fff;
+    --button_outline_color: #d01e26;
+    --button_font_color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    display: inline-block;
+}
+
+.btn-sendTiktok .button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_font_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.btn-sendTiktok:hover .button_top {
+    /* Efecto hover: sube el botón */
+    transform: translateY(-0.33em);
+}
+
+.btn-sendTiktok:active .button_top {
+    /* Efecto clic: baja el botón */
+    transform: translateY(0);
+}
