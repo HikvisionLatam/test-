@@ -1,0 +1,73 @@
+.img-comp-container {
+    position: relative;
+    display: inline-block; /* El contenedor se encoge al tamaño de la imagen */
+    overflow: hidden;
+    line-height: 0; /* Elimina espacios fantasma debajo de las imágenes */
+    border-radius: 8px; /* Opcional: bordes redondeados estéticos */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra elegante */
+    user-select: none;
+    -webkit-user-select: none;
+    /* Límites para que no se salga de pantallas pequeñas */
+    max-width: 100%; 
+    max-height: 90vh; /* Deja un poco de aire arriba y abajo */
+}
+
+/* IMAGEN BASE (After): Esta define el tamaño del componente */
+.img-comp-after {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh; /* Coincide con el contenedor */
+    /* Importante: NO tiene position absolute */
+}
+
+/* IMAGEN SUPERIOR (Before): Flota exactamente encima */
+.img-comp-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Toma el 100% de la imagen BASE, no de la pantalla */
+    height: 100%;
+    object-fit: cover; /* Asegura cobertura total sobre el área definida por la base */
+    z-index: 2;
+    will-change: clip-path;
+}
+
+/* EL DRAGGER: Se adapta a la altura de la imagen */
+.img-comp-dragger {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 10;
+    cursor: ew-resize;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.img-comp-handle-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(32, 156, 216, 1) 0%, rgba(116, 58, 239, 1) 19%, rgba(197, 35, 143, 1) 39%, rgba(211, 1, 74, 1) 66%, rgba(237, 133, 11, 1) 84%, rgba(253, 188, 4, 1) 100%);
+    border: 3px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.img-comp-dragger:hover .img-comp-handle-btn {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.img-comp-handle-btn i {
+    color: #fff;
+    font-size: 18px;
+}
