@@ -1,0 +1,107 @@
+import { useEffect, useState } from 'react';
+import CalendarComponent from './components/Calendar.jsx';
+import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+
+const SUPABASE_URL = 'https://svyoxrtdxvtbuqvqfhwa.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_Uwf34VWmY2eBIkoP3KCUuw_sC_b0t0V';
+
+const BrazilCalendarPage = () => {
+    const { t, i18n } = useTranslation(); 
+    const [eventsByCountry, setEventsByCountry] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+
+    useEffect(() => {
+        i18n.changeLanguage('pt');
+    }, [i18n]);
+
+
+    useEffect(() => {
+        const fetchEvents = async () => {
+            try {
+                setLoading(true);
+                setError(null);
+
+                const url = `${SUPABASE_URL}/rest/v1/events?select=*`;
+
+                const res = await fetch(url, {
+                    headers: {
+                        apikey: SUPABASE_ANON_KEY,
+                        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+                    },
+                });
+
+                if (!res.ok) {
+                    const text = await res.text();
+                    throw new Error(`Error ${res.status}: ${text}`);
+                }
+
+                const rows = await res.json();
+
+                const brazilAndFeaturedEvents = rows.filter(row => {
+                    const isBrazil = row.name === 'Brasil' || row.name === 'Brazil';
+                    const isFeatured = row.typeEvent === 'Destacados' || row.name === 'LATAM' || row.name === 'Latam';
+                    return isBrazil || isFeatured;
+                }).map(row => {
+                    // Asegurar que los destacados tengan el tipo correcto visualmente
+                    if (row.typeEvent === 'Destacados' || row.name === 'LATAM' || row.name === 'Latam') {
+                        return { ...row, typeEvent: 'Destacados', tipo_evento: 'Destacados' };
+                    }
+                    return row;
+                });
+
+                setEventsByCountry({ Brasil: brazilAndFeaturedEvents });
+            } catch (err) {
+                console.error('Error cargando eventos Brasil:', err);
+                setError('No se pudieron cargar los eventos de Brasil.');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchEvents();
+    }, []);
+
+    if (loading) {
+        return (
+            <>
+                <Helmet>
+                    <title>{t('calendar.title_country', { country: 'Brasil' })}</title>
+                </Helmet>
+                <div className="calendar-root-center">
+                    <p>{t('calendar.loading')}</p>
+                </div>
+            </>
+        );
+    }
+
+    if (error) {
+        return (
+            <>
+                <Helmet>
+                    <title>{t('calendar.title_country', { country: 'Brasil' })}</title>
+                </Helmet>
+                <div className="calendar-root-center">
+                    <p>{t('calendar.error_loading')}</p>
+                </div>
+            </>
+        );
+    }
+
+    return (
+        <>
+            <Helmet>
+                <title>{t('calendar.title_country', { country: 'Brasil' })}</title>
+            </Helmet>
+            <CalendarComponent
+                events={eventsByCountry}
+                availableTabs={['Brasil']}
+                defaultTab="Brasil"
+            />
+        </>
+    );
+};
+
+export default BrazilCalendarPage;
