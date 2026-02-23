@@ -1,0 +1,340 @@
+.card-scene-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center;  <-- ELIMINADO: Esto centraba verticalmente */
+  padding: 10px; /* Reducido de 20px para ganar espacio en móvil */
+  /* min-height: 100vh; <-- ELIMINADO: Causa del problema en móvil */
+  box-sizing: border-box;
+  width: 100%;
+  pointer-events: none; /* Dejamos pasar clicks fuera de la tarjeta */
+}
+
+.card-wrapper {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  will-change: transform, width, height;
+  display: flex;
+  flex-direction: column;
+  /* Ajuste para móviles: que no ocupe toda la pantalla verticalmente si no es necesario */
+  max-height: 80vh; 
+  pointer-events: auto; /* Reactivamos clicks en la tarjeta */
+}
+
+.grid-content {
+  padding: 24px;
+}
+
+.close-btn-grid {
+  background: #d01c19;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  transition: background 0.2s;
+}
+.close-btn-grid:hover { background: #b01a16; }
+
+.thumbs-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumb-item {
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+}
+.thumb-item:hover { transform: translateY(-3px); }
+
+.thumb-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background: #eee;
+  display: block;
+  border: 1px solid #d01c19;
+}
+
+.thumb-label { font-size: 13px; color: #555; font-weight: 500; }
+
+
+/* --- DETAIL VIEW --- */
+
+.detail-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.close-sticky-btn {
+  position: sticky;
+  top: 15px;
+  left: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  border: 1px solid #eee;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 50;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.close-sticky-btn:hover { background: white; transform: scale(1.05); }
+
+.scroll-content-inner {
+  padding: 0 24px 24px 24px;
+}
+
+.hero-section {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img-detail {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.text-section {
+  margin-bottom: 20px;
+}
+
+.action-footer {
+  padding: 20px 24px;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+  margin-top: auto;
+}
+
+.btns-row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary {
+  flex: 2;
+  background: #d01c19;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.btn-primary:hover { background: #333; }
+
+.btn-secondary {
+  flex: 1;
+  background: transparent;
+  color: #555;
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-secondary:hover { border-color: #333; color: #111; }
+
+@media (min-width: 768px) {
+  /* En Desktop podemos permitir que la tarjeta sea más alta si es necesario */
+  .card-wrapper {
+      max-height: 85vh;
+  }
+  
+  .detail-content {
+    overflow: hidden; 
+  }
+
+  .scroll-content-inner {
+    overflow-y: auto;
+    flex: 1;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #d01c19 #f1f1f1;
+  }
+
+  .scroll-content-inner::-webkit-scrollbar { width: 6px; }
+  .scroll-content-inner::-webkit-scrollbar-track { background: #f1f1f1; }
+  .scroll-content-inner::-webkit-scrollbar-thumb { background: #d01c19; border-radius: 10px; }
+
+  .action-footer {
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+  }
+}
+
+/* --- ANIMACIONES DE TÍTULO --- */
+
+.slide-up-text {
+  animation: slideUpFade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.slide-up-text-delay {
+  animation: slideUpFade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(100%);
+  animation-delay: 0.15s; /* Pequeño retraso para efecto cascada */
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- CURSORES --- */
+.cursor-grab {
+  cursor: grab;
+}
+.cursor-grab:active {
+  cursor: grabbing;
+}
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F2E8DA; 
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; 
+  transition: opacity 0.8s ease-in-out;
+}
+
+.loader-bar-bg {
+  width: 200px;
+  height: 4px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  background: #d01c19; 
+  width: 0%;
+  border-radius: 4px;
+}
+
+.help-btn {
+  background: white;
+  border: 1px solid #eee;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #333;
+}
+
+.help-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.help-card {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 16px;
+  width: 280px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.5);
+  transform-origin: bottom right;
+  z-index: 200;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #555;
+}
+.control-row:last-child { margin-bottom: 0; }
+.key-icon {
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
